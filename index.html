@@ -1,3 +1,16 @@
+<!-- 
+    Author -> Ayush Mangore
+   In this project I have tried to imitate ms excel, therefore it is named as my excel.
+   This excel sheet contains 100 rows and 26 columns and users can fill their data in it 
+   and also there are various features included like to change the font family and font size,
+   users can manipulate style to bold or italic as well, a feature of changing left, center and 
+   right orientation are also there, font color and background color of the cells can also be changed, 
+   the location of every cell is being displayed on the address bar, I have also included dependency feature 
+   where one cell can be dependent on any other cell for its data calculation, users can perform various mathematical 
+   operations as well and the best part is the cycle detection if while implementing dependency formula somehow cycle 
+   will be created then the user will be notified as well as user will have the option to view the cycle. Multiple sheets 
+   can be added and deleted, a feature of copy-paste is also there.Users can download and upload sheets.
+ -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +24,9 @@
     <title>My Excel</title>
 </head>
 <body>
+    <!-- 
+        This is the html element which includes header
+     -->
     <div class="page-actions-cont">
         <div class="page-action">Home</div>
         <div class="page-action selected-page-action">File</div>
@@ -18,6 +34,9 @@
         <div class="page-action">Layout</div>
         <div class="page-action">Help</div>
     </div>
+    <!-- 
+        This element contains options for copy, paste, font style, font size, style, orientation,  color
+     -->
     <div class="cellprop-actions-cont">
         <span class="material-icons copy">
             content_copy
@@ -82,11 +101,15 @@
         </div>
         
     </div>
+    <!-- 
+        This elements contains our address bar and formula bar
+     -->
     <div class="formula-actions-cont">
         <input type="text" readonly class="address-bar">
         <img class="formula-icon" src="https://img.icons8.com/ios/50/000000/formula-fx.png"/>
         <input type="text" class="formula-bar">
     </div>
+    <!-- This is the main grid -->
     <div class="grid-cont">
         <div class="top-left-dummy-box"></div>
         <div class="address-col-cont"></div>
@@ -94,6 +117,7 @@
             <div class="address-row-cont"></div>
         </div>
     </div>
+    <!-- This is the bottom content of the page where user can add multiple sheets -->
     <div class="sheet-actions-cont">
         <div class="sheet-add-icon">
             <span class="material-icons">
